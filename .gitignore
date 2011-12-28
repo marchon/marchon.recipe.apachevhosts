@@ -1,0 +1,25 @@
+# Mac
+.DS_Store
+
+# vi, editors
+*~
+*.swp
+
+# Python pre-compiled
+*.pyc
+
+# Python egg build and dist
+*/build/*
+*/dist/*
+*/SOURCES.txt
+
+# Eclipse
+.settings
+.project
+.pydevproject
+
+*/Products.DataGrid*/*
+*/Products.DataGridField-*/*
+
+
+
