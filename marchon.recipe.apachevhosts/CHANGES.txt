@@ -1,0 +1,34 @@
+0.2.02 (2011-12-28)
+-------------------
+
+- forked from gcommons to be a stand alone recipe for just apachevhosts 
+
+- includes feature changes 
+
+- richer options in default template 
+
+
+
+0.2.01 (2011-12-28) 
+-------------------
+
+- Documentation and other minor changes for my own edification (shared with the world) 
+  [marchon (at) g(that big search company)(dot)com - aka:George Lambert ] 
+
+  * Sample Local buildout file in README.txt 
+ 
+- Fixed Bug - added return value to update in  gcommons/recipe/apachevhosts/__init__.py
+
+    def update(self):
+        """Updater"""
+        return self.writeVhosts()
+
+
+
+
+0.1 (xxxx-xx-xx)
+----------------
+
+- Created recipe with ZopeSkel
+  [Juan Grigea]
+

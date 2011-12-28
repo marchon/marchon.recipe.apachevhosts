@@ -1,0 +1,3 @@
+[zc.buildout]
+default = marchon.recipe.apachevhosts:Recipe
+
