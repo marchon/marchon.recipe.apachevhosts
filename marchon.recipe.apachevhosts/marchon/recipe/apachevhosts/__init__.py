@@ -97,13 +97,12 @@ class Recipe(object):
         files = []
         vhosts = self.options['vhosts']
         httpaddress =  self.options['http-address']
-        outputdir = self.options['outputdir']
         scriptalias = self.options['script-alias'] 
 
         prefix = self.options.get('prefix')
         postfix = self.options.get('postfix')
         template = self.options.get('template')
-        
+        outputdir = self.options.get('outputdir')
 
         absdir = self.options.get('absdir') 
 
