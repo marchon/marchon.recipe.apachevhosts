@@ -43,7 +43,7 @@
         
         
         [apache]
-        recipe = gcommons.recipe.apachevhosts
+        recipe = marchon.recipe.apachevhosts
         http-address = ${buildout:http-address}
         postfix = test.gcommons.org
         outputdir = parts/apache/conf.d/
@@ -56,46 +56,33 @@
         --------------------------------------------------------------------------------------------
         
         
-        
-        
-        
+        REQUIRED VARIABLES:
 
+           vhosts = 
+                   shorthostname path fullhostname 
 
+           http-address = 127.0.0.1:8080
 
-  Getting Started 
-  Sample Local buildout file
+           script-alias = 
+                          /cgibin ./cgibin
+                          /cgi-bin ./cgi-bin
 
---------------------------------------------------------------------------------------------
-[buildout] 
-develop = . 
-parts= makesitedirs apache 
-http-address = 127.0.0.1:8080
+        OPTIONAL VARIABLES: 
 
+           prefix        = hostid 
+           postfix       = test.yourdomain.net 
+           template      =  
+           outputdir     = parts/apache/conf.d/ 
 
-[makesitedirs]
-recipe = z3c.recipe.mkdir
-paths = foo/bar
-        /darkmatter/site
-        /journalcommons/site
-        /historicalmaterialism/site
-        ./parts/apache/conf.d/
-        
+        OPTIONAL VARIABLES - with default values: 
 
-
-
-[apache]
-recipe = marchon.recipe.apachevhosts
-http-address = ${buildout:http-address}
-postfix = test.gcommons.org
-outputdir = parts/apache/conf.d/
-vhosts =
-        darkmatter /darkmatter/site www.darkmatter.info
-        journalcommons /journalcommons/site www.gcommons.org
-        historicalmaterialism /historicalmaterialism/site www.historicalmaterialism.org
-
-
---------------------------------------------------------------------------------------------
-
-
+           absdir = '%s/sitepath' % self.buildout['buildout']['directory']
+           listenaddress = '*'
+           listenport = '80'
+           url = 'localhost'
+           serveradmin = 'webmaster@%s' % url
+           reldir = absdir
+           ProxyRequests = 'Off'
+           ProxyPath = 'http://localhost:8000'
 
 
